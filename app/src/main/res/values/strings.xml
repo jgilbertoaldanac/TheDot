@@ -23,4 +23,6 @@
     <string name="intencionesDia">Intenciones del Día</string>
     <string name="intencionesSemana">Intenciones de la Semana</string>
     <string name="misDias">Mis Días</string>
+    <string name="agenda">Agenda</string>
+    <string name="agendaCita">*** AgendaCita</string>
 </resources>
