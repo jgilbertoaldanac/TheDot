@@ -4,6 +4,156 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/light_brown"
     tools:context=".profile">
+
+
+
+    <TextView
+        android:id="@+id/titulo_metodos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:text="Mi perfil"
+        android:fontFamily="serif"
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.32"
+        app:layout_constraintStart_toEndOf="@+id/regresar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/regresar"
+        android:layout_width="45dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="52dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/regresar_hdpi_03" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="123dp"
+        android:layout_height="122dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/trazado4_xdpi_04" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="156dp"
+        android:layout_height="206dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/trazado3_xdpi_04" />
+
+
+    <Button
+        android:id="@+id/btn_ap_reminders"
+        android:layout_width="332dp"
+        android:layout_height="98dp"
+        android:layout_weight="1"
+        android:background="@drawable/option1_button"
+        android:text="Recordatorios"
+        android:textColor="@color/light_brown"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_ap_introduction" />
+
+    <Button
+        android:id="@+id/btn_ap_afirmations"
+        android:layout_width="163dp"
+        android:layout_height="87dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="24dp"
+        android:layout_weight="1"
+        android:background="@drawable/option3_button"
+        android:text="Afirmaciones"
+        android:textColor="@color/light_brown"
+        app:layout_constraintEnd_toStartOf="@+id/btn_ap_diary"
+        app:layout_constraintHorizontal_bias="0.133"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_ap_reminders" />
+
+    <Button
+        android:id="@+id/btn_ap_goals"
+        android:layout_width="163dp"
+        android:layout_height="87dp"
+        android:layout_marginStart="36dp"
+        android:layout_weight="1"
+        android:background="@drawable/option2_button"
+        android:text="Metas"
+        android:textColor="@color/light_brown"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_ap_diary"
+        app:layout_constraintHorizontal_bias="0.109"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_ap_afirmations"
+        app:layout_constraintVertical_bias="0.324" />
+
+    <Button
+        android:id="@+id/btn_ap_diary"
+        android:layout_width="142dp"
+        android:layout_height="192dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="40dp"
+        android:layout_weight="1"
+        android:background="@drawable/option4_button"
+        android:text="Agenda"
+        android:textColor="@color/light_brown"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_ap_reminders"
+        app:layout_constraintVertical_bias="0.297" />
+
+    <ImageView
+        android:id="@+id/iv_ap_profile"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:paddingTop="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titulo_metodos"
+        app:srcCompat="@drawable/perfil_xdpi_04" />
+
+    <ImageView
+        android:id="@+id/iv_ap_simbolo"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:paddingTop="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titulo_metodos"
+        app:srcCompat="@drawable/simbolo_xdpi_04" />
+
+    <TextView
+        android:id="@+id/tv_ap_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="15dp"
+        android:text="Nombre de Usuario"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:fontFamily="serif"
+        android:textColor="@color/dark_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_ap_profile" />
+
+    <TextView
+        android:id="@+id/tv_ap_introduction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:paddingHorizontal="40dp"
+        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua."
+        android:textAlignment="inherit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_ap_name" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
