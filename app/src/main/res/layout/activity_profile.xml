@@ -10,7 +10,7 @@
 
 
     <TextView
-        android:id="@+id/titulo_metodos"
+        android:id="@+id/tv_ap_profile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="52dp"
@@ -20,11 +20,11 @@
         android:textSize="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.32"
-        app:layout_constraintStart_toEndOf="@+id/regresar"
+        app:layout_constraintStart_toEndOf="@+id/btn_ap_return"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/regresar"
+        android:id="@+id/btn_ap_return"
         android:layout_width="45dp"
         android:layout_height="53dp"
         android:layout_marginStart="36dp"
@@ -34,7 +34,7 @@
         app:srcCompat="@drawable/regresar_hdpi_03" />
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/iv_ap_5"
         android:layout_width="123dp"
         android:layout_height="122dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -42,7 +42,7 @@
         app:srcCompat="@drawable/trazado4_xdpi_04" />
 
     <ImageView
-        android:id="@+id/imageView6"
+        android:id="@+id/iv_ap_6"
         android:layout_width="156dp"
         android:layout_height="206dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -116,7 +116,7 @@
         android:paddingTop="25dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titulo_metodos"
+        app:layout_constraintTop_toBottomOf="@+id/tv_ap_profile"
         app:srcCompat="@drawable/perfil_xdpi_04" />
 
     <ImageView
@@ -126,7 +126,7 @@
         android:paddingTop="25dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titulo_metodos"
+        app:layout_constraintTop_toBottomOf="@+id/tv_ap_profile"
         app:srcCompat="@drawable/simbolo_xdpi_04" />
 
     <TextView
