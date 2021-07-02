@@ -13,11 +13,12 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="52dp"
         android:text="Métodos"
+        android:fontFamily="serif"
+        android:textColor="@color/black"
         android:textSize="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.32"
         app:layout_constraintStart_toEndOf="@+id/regresar"
-        android:textColor="@color/black"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
@@ -30,26 +31,90 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/regresar_hdpi_03" />
 
+
     <TextView
         android:id="@+id/textView2"
         android:layout_width="333dp"
         android:layout_height="86dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="64dp"
         android:text="Queremos que lleves una vida más sana y tranquila, por eso, te dejamos a continuación una serie de métodos que ayudan a manejar el estrés y lograr total relajación."
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.461"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/titulo_metodos" />
 
-    <LinearLayout
-        android:layout_width="179dp"
-        android:layout_height="434dp"
+    <Button
+        android:id="@+id/favoritos"
+        android:layout_width="181dp"
+        android:layout_height="92dp"
         android:layout_marginStart="16dp"
         android:layout_marginBottom="48dp"
+        android:layout_weight="1"
+        android:background="@drawable/option5_button"
+        android:text="Favoritos"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent" />
 
-    </LinearLayout>
+    <Button
+        android:id="@+id/estiramiento"
+        android:layout_width="178dp"
+        android:layout_height="97dp"
+        android:layout_marginBottom="8dp"
+        android:layout_weight="1"
+        android:background="@drawable/option3_button"
+        android:text="Estiramiento"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/tecnicas"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.315"
+        app:layout_constraintStart_toEndOf="@+id/respiracion3" />
+
+    <Button
+        android:id="@+id/respiracion3"
+        android:layout_width="183dp"
+        android:layout_height="98dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="12dp"
+        android:layout_weight="1"
+        android:background="@drawable/option1_button"
+        android:text="Respiración"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/meditaicion"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/meditaicion"
+        android:layout_width="180dp"
+        android:layout_height="163dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/option2_button"
+        android:text="Meditación"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/favoritos"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/tecnicas"
+        android:layout_width="180dp"
+        android:layout_height="270dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="48dp"
+        android:background="@drawable/option4_button"
+        android:text="Técnicas"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="521dp"
+        android:layout_height="489dp"
+        android:layout_marginTop="44dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:srcCompat="@drawable/trazado3_xxdpi_05" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
