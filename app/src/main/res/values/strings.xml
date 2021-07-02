@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">TheDot</string>
+    <string name="iniciarSesion">Iniciar Sesión</string>
+    <string name="crearCuenta">Crear Cuenta</string>
+    <string name="logo">Logo</string>
+    <string name="trazado">trazado</string>
+    <string name="theArtToSurvive">The art to survive is to believe you can always start over</string>
 </resources>
