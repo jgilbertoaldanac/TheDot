@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/light_brown"
+    tools:context=".Home">
+
+
+    <ImageButton
+        android:id="@+id/btn_config"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="350dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_baseline_more_horiz_24"
+        android:textSize="12dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:layout_marginTop="20dp"
+        android:text="¡hola, usuario!"
+        android:textStyle="bold|normal"
+        android:fontFamily="serif"
+        android:textAlignment="center"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+
+        <Button
+            android:id="@+id/btn_perfil"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/nav_buttons"
+            android:text="Mi perfil"
+            android:textColor="@color/white"
+            android:textSize="12dp" />
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:text="Métodos"
+            android:textSize="12dp"
+            android:id="@+id/btn_metodos"
+            android:textColor="@color/white"
+            android:background="@drawable/nav_buttons"/>
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:id="@+id/btn_journal"
+            android:layout_marginLeft="5dp"
+            android:text="Journal"
+            android:textSize="12dp"
+            android:textColor="@color/white"
+            android:background="@drawable/nav_buttons"/>
+        <Button
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/btn_opciones"
+            android:layout_marginLeft="5dp"
+            android:text="+"
+            android:textSize="12dp"
+            android:textColor="@color/white"
+            android:background="@drawable/nav_buttons"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+
+        <ImageButton
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="200dp"
+            android:src="@drawable/regresar1_mdpi_02" />
+
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="450dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:src="@drawable/frase" />
+
+        <ImageButton
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="200dp"
+            android:src="@drawable/avanzar_mdpi_02" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="100dp"
+        android:layout_height="20dp"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+        <Button
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:background="@drawable/nav_buttons"
+            android:layout_marginLeft="20dp"
+            android:id="@+id/punto_uno"/>
+
+        <Button
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:background="@drawable/nav_buttons"
+            android:layout_marginLeft="4dp"
+            android:id="@+id/punto_dos"/>
+
+        <Button
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:background="@drawable/nav_buttons"
+            android:layout_marginLeft="4dp"
+            android:id="@+id/punto_tres"/>
+        <Button
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:background="@drawable/nav_buttons"
+            android:layout_marginLeft="4dp"
+            android:id="@+id/punto_cuatro"/>
+    </LinearLayout>
+    
+
+
+
+
+</LinearLayout>
