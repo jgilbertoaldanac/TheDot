@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/light_brown"
+    android:background="#EDE9D6"
     tools:context=".Home">
 
 
@@ -89,7 +89,7 @@
             android:src="@drawable/regresar1_mdpi_02" />
 
         <ImageView
-            android:layout_width="300dp"
+            android:layout_width="290dp"
             android:layout_height="450dp"
             android:layout_marginTop="10dp"
             android:gravity="center"
@@ -99,6 +99,7 @@
             android:layout_width="60dp"
             android:layout_height="50dp"
             android:layout_marginTop="200dp"
+            android:layout_marginRight="60dp"
             android:src="@drawable/avanzar_mdpi_02" />
     </LinearLayout>
 
@@ -133,8 +134,14 @@
             android:background="@drawable/nav_buttons"
             android:layout_marginLeft="4dp"
             android:id="@+id/punto_cuatro"/>
+        <Button
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:background="@drawable/nav_buttons"
+            android:layout_marginLeft="4dp"
+            android:id="@+id/punto_cinco"/>
     </LinearLayout>
-    
+
 
 
 
