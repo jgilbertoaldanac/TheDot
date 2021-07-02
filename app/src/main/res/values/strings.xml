@@ -11,4 +11,11 @@
     <string name="email">Correo Electrónico</string>
     <string name="password">Contraseña</string>
     <string name="olvidaste_contra">¿Olvidaste tu Contraseña?</string>
+    <string name="configuracion">Configuración</string>
+    <string name="nombre">Nombre</string>
+    <string name="fechaNacimiento">Fecha de Nacimiento</string>
+    <string name="ubicacion">Ubicación</string>
+    <string name="ocupacion">Ocupación</string>
+    <string name="cambiarContrasenia">Cambiar Constraseña</string>
+    <string name="cerrarSesion">Cerrar Sesión</string>
 </resources>
