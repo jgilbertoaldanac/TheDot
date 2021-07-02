@@ -2,7 +2,13 @@
     <string name="app_name">TheDot</string>
     <string name="iniciarSesion">Iniciar Sesión</string>
     <string name="crearCuenta">Crear Cuenta</string>
+    <string name="atras">Atras</string>
     <string name="logo">Logo</string>
     <string name="trazado">trazado</string>
     <string name="theArtToSurvive">The art to survive is to believe you can always start over</string>
+    <string name="inicia">inicia</string>
+    <string name="sesion">sesión</string>
+    <string name="email">Correo Electrónico</string>
+    <string name="password">Contraseña</string>
+    <string name="olvidaste_contra">¿Olvidaste tu Contraseña?</string>
 </resources>
