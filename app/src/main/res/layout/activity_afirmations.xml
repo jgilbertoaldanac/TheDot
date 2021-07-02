@@ -6,4 +6,118 @@
     android:layout_height="match_parent"
     tools:context=".afirmations">
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".afirmations"
+        tools:layout_editor_absoluteX="-63dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="50dp"
+            android:layout_height="63dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="48dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/regresar_xxxdpi_06" />
+
+        <View
+            android:id="@+id/view4"
+            android:layout_width="300dp"
+            android:layout_height="3dp"
+            android:background="@color/light_blue"
+            tools:layout_editor_absoluteX="52dp"
+            tools:layout_editor_absoluteY="364dp" />
+
+        <View
+            android:id="@+id/vie2"
+            android:layout_width="300dp"
+            android:layout_height="3dp"
+            android:layout_marginBottom="20dp"
+            android:background="@color/light_blue"
+            app:layout_constraintBottom_toTopOf="@+id/imageView5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="DuplicateIds" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="49dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="124dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/signo_xxxdpi_06" />
+
+        <TextView
+            android:id="@+id/titulo_afirmacion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="68dp"
+            android:text="Afirmaciones"
+            android:textSize="30dp"
+            app:layout_constraintEnd_toStartOf="@+id/imageView2"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/imageView3"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/afirmacion1"
+            android:layout_width="336dp"
+            android:layout_height="39dp"
+            android:layout_marginBottom="24dp"
+            android:text="*Atraigo muchas oportunidades"
+            android:textSize="23dp"
+            app:layout_constraintBottom_toTopOf="@+id/view4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.493"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/afirmacion2"
+            android:layout_width="318dp"
+            android:layout_height="33dp"
+            android:layout_marginBottom="20dp"
+            android:text="*Soy segura de mi misma"
+            android:textSize="23dp"
+            app:layout_constraintBottom_toTopOf="@+id/view2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="300dp"
+            android:layout_height="3dp"
+            android:background="@color/light_blue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.468"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="452dp" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="150dp"
+            android:layout_height="204dp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/trazado6_xdpi_04"
+            tools:layout_editor_absoluteX="268dp" />
+
+        <TextView
+            android:id="@+id/afirmacion"
+            android:layout_width="308dp"
+            android:layout_height="37dp"
+            android:layout_marginBottom="24dp"
+            android:text="*Recibo en abundancia"
+            android:textSize="23dp"
+            app:layout_constraintBottom_toTopOf="@+id/vie2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
