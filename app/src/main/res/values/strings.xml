@@ -18,4 +18,9 @@
     <string name="ocupacion">Ocupación</string>
     <string name="cambiarContrasenia">Cambiar Constraseña</string>
     <string name="cerrarSesion">Cerrar Sesión</string>
+    <string name="journal">Journal</string>
+    <string name="comoEstasHoy">¿Cómo estás hoy?</string>
+    <string name="intencionesDia">Intenciones del Día</string>
+    <string name="intencionesSemana">Intenciones de la Semana</string>
+    <string name="misDias">Mis Días</string>
 </resources>
