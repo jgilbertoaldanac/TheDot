@@ -9,7 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TheDot">
-        <activity android:name=".configuration"></activity>
+        <activity android:name=".information"></activity>
+        <activity android:name=".mydays" />
+        <activity android:name=".howareyoutoday" />
+        <activity android:name=".intentions_day" />
+        <activity android:name=".diary" />
+        <activity android:name=".afirmations" />
+        <activity android:name=".configuration" />
         <activity android:name=".journal" />
         <activity android:name=".profile" />
         <activity android:name=".methods" />
