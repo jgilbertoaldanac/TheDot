@@ -15,6 +15,7 @@
         android:layout_gravity="center">
 
         <ImageButton
+            android:id="@+id/btn_ca_return"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
@@ -100,7 +101,7 @@
             android:ems="12"
             android:textAlignment="center"
             android:hint="contraseña"
-            android:inputType="text"/>
+            android:inputType="textPassword"/>
 
         <EditText
             android:id="@+id/et_ca_confirmPass"
@@ -110,7 +111,7 @@
             android:ems="12"
             android:textAlignment="center"
             android:hint="confirmar contraseña"
-            android:inputType="text"/>
+            android:inputType="textPassword"/>
 
         <Button
             android:id="@+id/btn_ca_createAccount"

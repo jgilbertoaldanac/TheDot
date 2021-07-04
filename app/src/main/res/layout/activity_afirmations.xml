@@ -10,37 +10,41 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".afirmations"
-        tools:layout_editor_absoluteX="-63dp"
+        tools:layout_editor_absoluteX="-100dp"
         tools:layout_editor_absoluteY="0dp">
 
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="50dp"
-            android:layout_height="63dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="48dp"
+        <ImageButton
+            android:id="@+id/btn_aa_return"
+            android:layout_width="55dp"
+            android:layout_height="53dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="52dp"
+            android:backgroundTint="@color/light_brown"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/regresar_xxxdpi_06" />
+            android:src="@drawable/regresar_mdpi_02" />
 
         <View
             android:id="@+id/view4"
             android:layout_width="300dp"
             android:layout_height="3dp"
             android:background="@color/light_blue"
-            tools:layout_editor_absoluteX="52dp"
-            tools:layout_editor_absoluteY="364dp" />
+            app:layout_constraintBottom_toTopOf="@+id/afirmacion2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/afirmacion1" />
 
         <View
             android:id="@+id/vie2"
             android:layout_width="300dp"
             android:layout_height="3dp"
-            android:layout_marginBottom="20dp"
             android:background="@color/light_blue"
             app:layout_constraintBottom_toTopOf="@+id/imageView5"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.495"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/afirmacion"
+            app:layout_constraintVertical_bias="0.35"
             tools:ignore="DuplicateIds" />
 
         <ImageView
@@ -57,67 +61,71 @@
             android:id="@+id/titulo_afirmacion"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="36dp"
             android:layout_marginTop="68dp"
             android:text="Afirmaciones"
             android:textSize="30dp"
             app:layout_constraintEnd_toStartOf="@+id/imageView2"
             app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="@+id/imageView3"
+            app:layout_constraintStart_toEndOf="@+id/btn_aa_return"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/afirmacion1"
             android:layout_width="336dp"
             android:layout_height="39dp"
-            android:layout_marginBottom="24dp"
+            android:layout_marginTop="216dp"
             android:text="*Atraigo muchas oportunidades"
             android:textSize="23dp"
-            app:layout_constraintBottom_toTopOf="@+id/view4"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.493"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titulo_afirmacion" />
 
         <TextView
             android:id="@+id/afirmacion2"
             android:layout_width="318dp"
             android:layout_height="33dp"
-            android:layout_marginBottom="20dp"
+            android:layout_marginTop="84dp"
             android:text="*Soy segura de mi misma"
             android:textSize="23dp"
-            app:layout_constraintBottom_toTopOf="@+id/view2"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/afirmacion1" />
 
         <View
             android:id="@+id/view2"
             android:layout_width="300dp"
             android:layout_height="3dp"
             android:background="@color/light_blue"
+            app:layout_constraintBottom_toTopOf="@+id/afirmacion"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.468"
             app:layout_constraintStart_toStartOf="parent"
-            tools:layout_editor_absoluteY="452dp" />
+            app:layout_constraintTop_toBottomOf="@+id/afirmacion2" />
 
         <ImageView
             android:id="@+id/imageView2"
-            android:layout_width="150dp"
-            android:layout_height="204dp"
-            android:layout_marginTop="4dp"
+            android:layout_width="142dp"
+            android:layout_height="194dp"
+            android:layout_marginTop="1dp"
+            app:layout_constraintBottom_toTopOf="@+id/afirmacion1"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/trazado6_xdpi_04"
-            tools:layout_editor_absoluteX="268dp" />
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/trazado6_xdpi_04" />
 
         <TextView
             android:id="@+id/afirmacion"
             android:layout_width="308dp"
             android:layout_height="37dp"
-            android:layout_marginBottom="24dp"
+            android:layout_marginTop="84dp"
             android:text="*Recibo en abundancia"
             android:textSize="23dp"
-            app:layout_constraintBottom_toTopOf="@+id/vie2"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintHorizontal_bias="0.466"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/afirmacion2" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
