@@ -10,10 +10,16 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.inicio)
 
-        val buttonIniciarSesion: Button = findViewById(R.id.btn_iniciaSesion) as Button
+        val btn_login: Button = findViewById(R.id.btn_iniciaSesion) as Button
+        val btn_sign_in: Button = findViewById(R.id.btn_crearCuenta) as Button
 
-        buttonIniciarSesion.setOnClickListener{
-            var intent: Intent = Intent(this, Login::class.java)
+        btn_login.setOnClickListener{
+            var intent: Intent = Intent(this, login::class.java)
+            startActivity(intent)
+        }
+
+        btn_sign_in.setOnClickListener {
+            var intent: Intent = Intent(this, create_account::class.java)
             startActivity(intent)
         }
     }

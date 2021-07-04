@@ -5,17 +5,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#EDE9D6"
+    android:background="@color/light_brown"
     tools:context=".Home">
 
 
     <ImageButton
-        android:id="@+id/btn_config"
+        android:id="@+id/btn_ah_config"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginLeft="350dp"
         android:layout_marginTop="10dp"
         android:src="@drawable/ic_baseline_more_horiz_24"
+        android:backgroundTint="@color/light_brown"
         android:textSize="12dp" />
 
     <TextView
@@ -37,7 +38,7 @@
         android:layout_gravity="center">
 
         <Button
-            android:id="@+id/btn_perfil"
+            android:id="@+id/btn_ah_perfil"
             android:layout_width="100dp"
             android:layout_height="40dp"
             android:layout_marginLeft="20dp"
@@ -52,13 +53,13 @@
             android:layout_marginLeft="5dp"
             android:text="Métodos"
             android:textSize="12dp"
-            android:id="@+id/btn_metodos"
+            android:id="@+id/btn_ah_metodos"
             android:textColor="@color/white"
             android:background="@drawable/nav_buttons"/>
         <Button
             android:layout_width="100dp"
             android:layout_height="40dp"
-            android:id="@+id/btn_journal"
+            android:id="@+id/btn_ah_journal"
             android:layout_marginLeft="5dp"
             android:text="Journal"
             android:textSize="12dp"
@@ -67,7 +68,7 @@
         <Button
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:id="@+id/btn_opciones"
+            android:id="@+id/btn_ah_opciones"
             android:layout_marginLeft="5dp"
             android:text="+"
             android:textSize="12dp"
@@ -86,7 +87,8 @@
             android:layout_width="60dp"
             android:layout_height="50dp"
             android:layout_marginTop="200dp"
-            android:src="@drawable/regresar1_mdpi_02" />
+            android:backgroundTint="@color/light_brown"
+            android:src="@drawable/regresar_mdpi_02" />
 
         <ImageView
             android:layout_width="290dp"
@@ -100,6 +102,7 @@
             android:layout_height="50dp"
             android:layout_marginTop="200dp"
             android:layout_marginRight="60dp"
+            android:backgroundTint="@color/light_brown"
             android:src="@drawable/avanzar_mdpi_02" />
     </LinearLayout>
 
