@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TheDot">
-        <activity android:name=".login"></activity>
+        <activity android:name=".inicio"></activity>
+        <activity android:name=".login" />
         <activity android:name=".create_account" />
         <activity android:name=".sign_in" />
         <activity android:name=".information" />

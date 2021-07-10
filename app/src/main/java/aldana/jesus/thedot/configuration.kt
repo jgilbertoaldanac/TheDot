@@ -36,7 +36,7 @@ class configuration : AppCompatActivity() {
             startActivity(intent)
         }
     }
-    
+
 }
 
 
