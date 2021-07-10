@@ -19,7 +19,7 @@ class profile : AppCompatActivity() {
 
 
         btn_back.setOnClickListener{
-            var intent: Intent = Intent(this, Home::class.java)
+            var intent: Intent = Intent(this, HomeActivity::class.java)
             startActivity(intent)
         }
 

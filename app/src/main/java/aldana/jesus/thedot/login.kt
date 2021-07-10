@@ -15,7 +15,7 @@ class login : AppCompatActivity() {
         val btn_back: ImageButton = findViewById(R.id.btn_lg_back) as ImageButton
 
         btn_login.setOnClickListener{
-            var intent: Intent = Intent(this, Home::class.java)
+            var intent: Intent = Intent(this, HomeActivity::class.java)
             startActivity(intent)
         }
 

@@ -13,7 +13,7 @@ class methods : AppCompatActivity() {
         val btn_back: ImageButton = findViewById(R.id.btn_am_return) as ImageButton
 
         btn_back.setOnClickListener{
-            var intent: Intent = Intent(this, Home::class.java)
+            var intent: Intent = Intent(this, HomeActivity::class.java)
             startActivity(intent)
         }
     }

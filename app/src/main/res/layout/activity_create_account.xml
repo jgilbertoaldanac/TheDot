@@ -50,18 +50,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="crea"
+            android:textColor="@color/dark_gray"
             android:textSize="50sp"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="tu"
+            android:textColor="@color/dark_gray"
             android:textSize="50sp"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Cuenta"
+            android:textColor="@color/dark_gray"
             android:textStyle="italic"
             android:textSize="50sp"/>
 
@@ -81,6 +84,7 @@
             android:ems="12"
             android:textAlignment="center"
             android:hint="nombre de usuario"
+            android:textColor="@color/gray"
             android:inputType="text"/>
 
         <EditText
@@ -91,6 +95,7 @@
             android:ems="12"
             android:textAlignment="center"
             android:hint="correo electrónico"
+            android:textColor="@color/gray"
             android:inputType="text"/>
 
         <EditText
@@ -101,6 +106,7 @@
             android:ems="12"
             android:textAlignment="center"
             android:hint="contraseña"
+            android:textColor="@color/gray"
             android:inputType="textPassword"/>
 
         <EditText
@@ -111,6 +117,7 @@
             android:ems="12"
             android:textAlignment="center"
             android:hint="confirmar contraseña"
+            android:textColor="@color/gray"
             android:inputType="textPassword"/>
 
         <Button

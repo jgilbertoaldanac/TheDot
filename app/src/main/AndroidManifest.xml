@@ -22,7 +22,7 @@
         <activity android:name=".journal" />
         <activity android:name=".profile" />
         <activity android:name=".methods" />
-        <activity android:name=".Home" />
+        <activity android:name=".HomeActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
