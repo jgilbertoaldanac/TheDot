@@ -44,39 +44,48 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/titulo_metodos" />
 
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="409dp"
+        android:layout_height="488dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:srcCompat="@drawable/trazado3_xxdpi_05" />
+
     <Button
         android:id="@+id/favoritos"
-        android:layout_width="181dp"
-        android:layout_height="92dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="48dp"
+        android:layout_width="160dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginBottom="36dp"
         android:layout_weight="1"
         android:background="@drawable/option5_button"
         android:text="Favoritos"
         android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/estiramiento"
-        android:layout_width="178dp"
-        android:layout_height="97dp"
-        android:layout_marginBottom="8dp"
+        android:layout_width="160dp"
+        android:layout_height="84dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="20dp"
         android:layout_weight="1"
         android:background="@drawable/option3_button"
         android:text="Estiramiento"
         android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/tecnicas"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.315"
-        app:layout_constraintStart_toEndOf="@+id/respiracion3" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
         android:id="@+id/respiracion3"
-        android:layout_width="183dp"
-        android:layout_height="98dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginBottom="12dp"
+        android:layout_width="160dp"
+        android:layout_height="84dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginBottom="20dp"
         android:layout_weight="1"
         android:background="@drawable/option1_button"
         android:text="Respiración"
@@ -86,10 +95,10 @@
 
     <Button
         android:id="@+id/meditaicion"
-        android:layout_width="180dp"
-        android:layout_height="163dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="12dp"
+        android:layout_width="160dp"
+        android:layout_height="137dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginBottom="20dp"
         android:background="@drawable/option2_button"
         android:text="Meditación"
         android:textColor="@color/white"
@@ -98,24 +107,15 @@
 
     <Button
         android:id="@+id/tecnicas"
-        android:layout_width="180dp"
-        android:layout_height="270dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="48dp"
+        android:layout_width="160dp"
+        android:layout_height="232dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="36dp"
         android:background="@drawable/option4_button"
         android:text="Técnicas"
         android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
         app:layout_constraintEnd_toEndOf="parent" />
-
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="521dp"
-        android:layout_height="489dp"
-        android:layout_marginTop="44dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:srcCompat="@drawable/trazado3_xxdpi_05" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
