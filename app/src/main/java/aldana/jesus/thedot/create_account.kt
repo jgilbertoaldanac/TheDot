@@ -26,8 +26,8 @@ class create_account : AppCompatActivity() {
 
         btn_create_account.setOnClickListener{
             valida_registro()
-            //var intent: Intent = Intent(this, Home::class.java)
-            //startActivity(intent)
+            var intent: Intent = Intent(this, HomeActivity::class.java)
+            startActivity(intent)
         }
 
         btn_return.setOnClickListener {
