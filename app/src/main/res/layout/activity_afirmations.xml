@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".afirmations"
-        tools:layout_editor_absoluteX="-100dp"
+        tools:layout_editor_absoluteX="139dp"
         tools:layout_editor_absoluteY="0dp">
 
         <ImageButton
@@ -20,9 +20,9 @@
             android:layout_marginStart="25dp"
             android:layout_marginTop="52dp"
             android:backgroundTint="@color/light_brown"
+            android:src="@drawable/regresar_mdpi_02"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:src="@drawable/regresar_mdpi_02" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <View
             android:id="@+id/view4"
@@ -76,6 +76,7 @@
             android:layout_marginTop="216dp"
             android:text="*Atraigo muchas oportunidades"
             android:textSize="23dp"
+
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.493"
             app:layout_constraintStart_toStartOf="parent"
@@ -126,6 +127,18 @@
             app:layout_constraintHorizontal_bias="0.466"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/afirmacion2" />
+
+        <EditText
+            android:id="@+id/addAfirmation"
+            android:layout_width="289dp"
+            android:layout_height="43dp"
+            android:layout_marginTop="148dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="Ingrese afirmación"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titulo_afirmacion" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

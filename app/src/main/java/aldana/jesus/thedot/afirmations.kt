@@ -11,6 +11,7 @@ class afirmations : AppCompatActivity() {
         setContentView(R.layout.activity_afirmations)
 
         val btn_back: ImageButton = findViewById(R.id.btn_aa_return) as ImageButton
+        val bnt_add: ImageButton= findViewById(R.id.imageView5) as ImageButton
 
         btn_back.setOnClickListener{
             var intent: Intent = Intent(this, profile::class.java)
