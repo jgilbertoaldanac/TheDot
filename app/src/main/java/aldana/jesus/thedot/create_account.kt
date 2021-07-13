@@ -9,11 +9,18 @@ import android.widget.ImageButton
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.ktx.Firebase
 
 class create_account : AppCompatActivity() {
 
     private lateinit var auth: FirebaseAuth
+    private val db= FirebaseFirestore.getInstance()
+
+    val et_ca_user : EditText = findViewById(R.id.et_ca_user)
+    val et_ca_email : EditText = findViewById(R.id.et_ca_email)
+    val et_ca_password : EditText = findViewById(R.id.et_ca_password)
+    val et_ca_confirmPass : EditText = findViewById(R.id.et_ca_confirmPass)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,11 +45,6 @@ class create_account : AppCompatActivity() {
     }
 
     private fun valida_registro(){
-        val et_ca_user : EditText = findViewById(R.id.et_ca_user)
-        val et_ca_email : EditText = findViewById(R.id.et_ca_email)
-        val et_ca_password : EditText = findViewById(R.id.et_ca_password)
-        val et_ca_confirmPass : EditText = findViewById(R.id.et_ca_confirmPass)
-
         val user : String = et_ca_user.text.toString()
         val email : String = et_ca_email.text.toString()
         val password: String = et_ca_password.text.toString()
@@ -69,6 +71,11 @@ class create_account : AppCompatActivity() {
                     // Sign in success, update UI with the signed-in user's information
                     //Log.d(TAG, "createUserWithEmail:success")
                     val user = auth.currentUser
+
+                    db.collection("usuarios").document(email).set(
+                        hashMapOf("nombre" to et_ca_user.text.toString(),
+                        "correo" to et_ca_email,
+                        "contrasenia" to et_ca_password))
 
                     Toast.makeText(baseContext, "Usuario creado", Toast.LENGTH_SHORT).show()
                     //updateUI(user)

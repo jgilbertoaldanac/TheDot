@@ -25,7 +25,7 @@
         android:layout_height="wrap_content"
         android:textSize="30dp"
         android:layout_marginTop="20dp"
-        android:text="¡hola, usuario!"
+        android:text="¡Hola, usuario!"
         android:textStyle="bold|normal"
         android:fontFamily="serif"
         android:textAlignment="center"/>
@@ -98,6 +98,18 @@
             android:layout_marginTop="10dp"
             android:gravity="center"
             android:src="@drawable/frase" />
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ViewFlipper
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/vf_imagenes">
+            </ViewFlipper>
+        </RelativeLayout>
+
 
         <ImageButton
             android:layout_width="60dp"
