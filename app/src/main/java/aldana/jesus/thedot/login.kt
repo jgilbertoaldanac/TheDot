@@ -5,16 +5,21 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.*
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.ktx.Firebase
 
 class login : AppCompatActivity() {
 
-    var auth = FirebaseAuth.getInstance()
+    private lateinit var auth: FirebaseAuth
     private val db= FirebaseFirestore.getInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
+
+        auth = Firebase.auth
+
         val btn_login: Button = findViewById(R.id.btn_lg_iniciarSesion) as Button
         val btn_back: ImageButton = findViewById(R.id.btn_lg_back) as ImageButton
 
@@ -46,45 +51,43 @@ class login : AppCompatActivity() {
     }
 
     private fun ingresarFirebase(email:String, password:String){
-        db.collection("usuarios").document(email).get().addOnSuccessListener { document ->
-            if(document.exists()){
-                var email_bd = document.getString("correo")
-                var password_bd = document.getString("contrasenia")
+    //    db.collection("usuarios").document(email).get().addOnSuccessListener { document ->
+    //        if(document.exists()){
+    //            var email_bd = document.getString("correo")
+    //            var password_bd = document.getString("contrasenia")
 
-                if(email.equals(email_bd) && password.equals(password_bd)){
-                    val intent:Intent = Intent(this,HomeActivity::class.java)
-                    intent.putExtra("nombre",email)
-                    startActivity(intent)
-                }else{
-                    Toast.makeText(baseContext, "Autenticación fallida.", Toast.LENGTH_SHORT).show()
-                }
-            }else{
-                Toast.makeText(
-                    baseContext, "No esta registrado ese usuario", Toast.LENGTH_SHORT).show()
-            }
+    //            if(email.equals(email_bd) && password.equals(password_bd)){
+    //                val intent:Intent = Intent(this,HomeActivity::class.java)
+    //                intent.putExtra("nombre",email)
+    //                startActivity(intent)
+    //            }else{
+    //                Toast.makeText(baseContext, "Autenticación fallida.", Toast.LENGTH_SHORT).show()
+    //            }
+    //        }else{
+    //            Toast.makeText(
+    //                baseContext, "No esta registrado ese usuario", Toast.LENGTH_SHORT).show()
+    //        }
 
-        }
+    //    }
 
         
-       // auth.signInWithEmailAndPassword(email, password)
-         //   .addOnCompleteListener(this) { task ->
-           //     if (task.isSuccessful) {
-                    // Sign in success, update UI with the signed-in user's information
-                    // Log.d(TAG, "signInWithEmail:success")
-             //       val user = auth.currentUser
-                    //updateUI(user)
-               //     val intent:Intent = Intent(this,HomeActivity::class.java)
-                 //   startActivity(intent)
-               // } else {
+        auth.signInWithEmailAndPassword(email, password)
+            .addOnCompleteListener(this) { task ->
+                if (task.isSuccessful) {
+                     //Sign in success, update UI with the signed-in user's information
+
+                    val user = auth.currentUser
+
+                    val intent: Intent = Intent(this, HomeActivity::class.java)
+                    startActivity(intent)
+
+                } else {
                     // If sign in fails, display a message to the user.
-                    //Log.w(TAG, "signInWithEmail:failure", task.exception)
-                 //   Toast.makeText(
-                   //     baseContext, "Autenticación fallida.",
-                     //   Toast.LENGTH_SHORT
-                   // ).show()
-                    //updateUI(null)
-               // }
-           // }
+
+                    Toast.makeText(baseContext, "Autenticación fallida.", Toast.LENGTH_SHORT).show()
+
+                }
+        }
     }
 }
 
