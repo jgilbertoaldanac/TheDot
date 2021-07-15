@@ -13,7 +13,7 @@ class journal : AppCompatActivity() {
         val btn_back: ImageButton = findViewById(R.id.btn_aj_back) as ImageButton
 
         btn_back.setOnClickListener{
-            var intent: Intent = Intent(this, profile::class.java)
+            var intent: Intent = Intent(this, HomeActivity::class.java)
             startActivity(intent)
         }
     }

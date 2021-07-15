@@ -18,7 +18,6 @@ class create_account : AppCompatActivity() {
 
     private lateinit var auth: FirebaseAuth
 
-
     private val db= FirebaseFirestore.getInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -83,6 +82,7 @@ class create_account : AppCompatActivity() {
             "correo" to email,
             "contrasenia" to password)
 
+        auth.createUserWithEmailAndPassword(email, password)
         db.collection("usuarios").document(email).set(us).addOnSuccessListener { document->
 
             Toast.makeText(baseContext, "Usuario creado", Toast.LENGTH_SHORT).show()
