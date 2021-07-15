@@ -5,10 +5,12 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.*
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
 
 class login : AppCompatActivity() {
 
     var auth = FirebaseAuth.getInstance()
+    private val db= FirebaseFirestore.getInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -44,24 +46,46 @@ class login : AppCompatActivity() {
     }
 
     private fun ingresarFirebase(email:String, password:String){
-        auth.signInWithEmailAndPassword(email, password)
-            .addOnCompleteListener(this) { task ->
-                if (task.isSuccessful) {
+        db.collection("usuarios").document(email).get().addOnSuccessListener { document ->
+            if(document.exists()){
+                var email_bd = document.getString("correo")
+                var password_bd = document.getString("contrasenia")
+
+                if(email.equals(email_bd) && password.equals(password_bd)){
+                    val intent:Intent = Intent(this,HomeActivity::class.java)
+                    intent.putExtra("nombre",email)
+                    startActivity(intent)
+                }else{
+                    Toast.makeText(baseContext, "Autenticación fallida.", Toast.LENGTH_SHORT).show()
+                }
+            }else{
+                Toast.makeText(
+                    baseContext, "No esta registrado ese usuario", Toast.LENGTH_SHORT).show()
+            }
+
+        }
+
+        
+       // auth.signInWithEmailAndPassword(email, password)
+         //   .addOnCompleteListener(this) { task ->
+           //     if (task.isSuccessful) {
                     // Sign in success, update UI with the signed-in user's information
                     // Log.d(TAG, "signInWithEmail:success")
-                    val user = auth.currentUser
+             //       val user = auth.currentUser
                     //updateUI(user)
-                    val intent:Intent = Intent(this,HomeActivity::class.java)
-                    startActivity(intent)
-                } else {
+               //     val intent:Intent = Intent(this,HomeActivity::class.java)
+                 //   startActivity(intent)
+               // } else {
                     // If sign in fails, display a message to the user.
                     //Log.w(TAG, "signInWithEmail:failure", task.exception)
-                    Toast.makeText(
-                        baseContext, "Autenticación fallida.",
-                        Toast.LENGTH_SHORT
-                    ).show()
+                 //   Toast.makeText(
+                   //     baseContext, "Autenticación fallida.",
+                     //   Toast.LENGTH_SHORT
+                   // ).show()
                     //updateUI(null)
-                }
-            }
+               // }
+           // }
     }
 }
+
+

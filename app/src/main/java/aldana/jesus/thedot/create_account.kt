@@ -1,8 +1,10 @@
 package aldana.jesus.thedot
 
+import android.content.ContentValues.TAG
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageButton
@@ -15,12 +17,9 @@ import com.google.firebase.ktx.Firebase
 class create_account : AppCompatActivity() {
 
     private lateinit var auth: FirebaseAuth
-    private val db= FirebaseFirestore.getInstance()
 
-    val et_ca_user : EditText = findViewById(R.id.et_ca_user)
-    val et_ca_email : EditText = findViewById(R.id.et_ca_email)
-    val et_ca_password : EditText = findViewById(R.id.et_ca_password)
-    val et_ca_confirmPass : EditText = findViewById(R.id.et_ca_confirmPass)
+
+    private val db= FirebaseFirestore.getInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,9 +31,10 @@ class create_account : AppCompatActivity() {
         val btn_return: ImageButton = findViewById(R.id.btn_ca_return) as ImageButton
 
         btn_create_account.setOnClickListener{
+            //Poner una variable booleana para validar si se hizo el registro o no y que retorne
             valida_registro()
-            var intent: Intent = Intent(this, HomeActivity::class.java)
-            startActivity(intent)
+            //Si retorna true, abrirá el el home activity, si es falsa se queda en la pantalla
+
         }
 
         btn_return.setOnClickListener {
@@ -45,6 +45,11 @@ class create_account : AppCompatActivity() {
     }
 
     private fun valida_registro(){
+        val et_ca_user : EditText = findViewById(R.id.et_ca_user)
+        val et_ca_email : EditText = findViewById(R.id.et_ca_email)
+        val et_ca_password : EditText = findViewById(R.id.et_ca_password)
+        val et_ca_confirmPass : EditText = findViewById(R.id.et_ca_confirmPass)
+
         val user : String = et_ca_user.text.toString()
         val email : String = et_ca_email.text.toString()
         val password: String = et_ca_password.text.toString()
@@ -65,27 +70,35 @@ class create_account : AppCompatActivity() {
     }
 
     private fun registrarFirebase(email: String, password: String){
-        auth.createUserWithEmailAndPassword(email, password)
-            .addOnCompleteListener(this) { task ->
-                if (task.isSuccessful) {
-                    // Sign in success, update UI with the signed-in user's information
-                    //Log.d(TAG, "createUserWithEmail:success")
-                    val user = auth.currentUser
 
-                    db.collection("usuarios").document(email).set(
-                        hashMapOf("nombre" to et_ca_user.text.toString(),
-                        "correo" to et_ca_email,
-                        "contrasenia" to et_ca_password))
+        val et_ca_user : EditText = findViewById(R.id.et_ca_user)
+        val et_ca_email : EditText = findViewById(R.id.et_ca_email)
+        val et_ca_password : EditText = findViewById(R.id.et_ca_password)
 
-                    Toast.makeText(baseContext, "Usuario creado", Toast.LENGTH_SHORT).show()
-                    //updateUI(user)
-                } else {
-                    // If sign in fails, display a message to the user.
-                    //Log.w(TAG, "createUserWithEmail:failure", task.exception)
-                    Toast.makeText(baseContext, "Authentication failed.", Toast.LENGTH_SHORT).show()
-                    //updateUI(null)
-                }
-            }
+        val email = et_ca_email.text.toString()
+        val user = et_ca_user.text.toString()
+        val password = et_ca_password.text.toString()
+
+        val us = hashMapOf("nombre" to user,
+            "correo" to email,
+            "contrasenia" to password)
+
+        db.collection("usuarios").document(email).set(us).addOnSuccessListener { document->
+
+            Toast.makeText(baseContext, "Usuario creado", Toast.LENGTH_SHORT).show()
+
+            var intent: Intent = Intent(this, HomeActivity::class.java)
+                intent.putExtra("nombre",user)
+
+            startActivity(intent)
+
+
+        }.addOnFailureListener {
+            exception ->
+            Toast.makeText(baseContext, "Error al crear el usuario", Toast.LENGTH_SHORT).show()
+
+        }
+
+        }
     }
 
-}

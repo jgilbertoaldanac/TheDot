@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageButton
+import android.widget.TextView
 import android.widget.ViewFlipper
 import com.google.firebase.firestore.FirebaseFirestore
 
@@ -20,15 +21,21 @@ class HomeActivity : AppCompatActivity() {
         val btn_methods: Button = findViewById(R.id.btn_ah_metodos) as Button
         val btn_journal: Button = findViewById(R.id.btn_ah_journal) as Button
         val btn_options: Button = findViewById(R.id.btn_ah_opciones) as Button
+        val tv_bienvenida: TextView =findViewById(R.id.tv_ah_greeting) as TextView
+
+        val value : Intent = intent
+        var nombre= value.getStringExtra("nombre")
+
 
       //  val imagenes = arrayOf(R.drawable.sabias, R.drawable.ve_por_helado, R.drawable.playlist, R.drawable.foto_del_dia)
-
 
 
         btn_config.setOnClickListener{
             var intent: Intent = Intent(this, configuration::class.java)
             startActivity(intent)
         }
+
+        tv_bienvenida.setText("¡Hola, $nombre!")
 
         btn_profile.setOnClickListener{
             var intent: Intent = Intent(this, profile::class.java)
@@ -50,13 +57,9 @@ class HomeActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-
-
-    }
-
-    fun flipperImagenes(){
-
     }
 
 
-}
+   }
+
+
