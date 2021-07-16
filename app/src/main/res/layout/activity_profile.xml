@@ -62,7 +62,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_ap_introduction" />
+        app:layout_constraintTop_toBottomOf="@+id/et_ap_introduction" />
 
     <Button
         android:id="@+id/btn_ap_afirmations"
@@ -120,15 +120,16 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_ap_profile"
         app:srcCompat="@drawable/perfil_xdpi_04" />
 
-    <ImageView
-        android:id="@+id/iv_ap_simbolo"
+    <ImageButton
+        android:id="@+id/ib_ap_simbolo"
         android:layout_width="160dp"
-        android:layout_height="160dp"
-        android:paddingTop="25dp"
+        android:layout_height="170dp"
+        android:paddingTop="15dp"
+        android:background="@android:color/transparent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_ap_profile"
-        app:srcCompat="@drawable/simbolo_xdpi_04" />
+        android:src="@drawable/simbolo_xxdpi_05" />
 
     <TextView
         android:id="@+id/tv_ap_name"
@@ -144,14 +145,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/iv_ap_profile" />
 
-    <TextView
-        android:id="@+id/tv_ap_introduction"
+    <EditText
+        android:id="@+id/et_ap_introduction"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="80dp"
         android:paddingTop="15dp"
         android:paddingBottom="15dp"
         android:paddingHorizontal="40dp"
-        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua."
+        android:text=""
         android:textAlignment="inherit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
