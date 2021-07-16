@@ -94,11 +94,8 @@ class HomeActivity : AppCompatActivity() {
 
     }
 
-
    }
 
-private fun ImageSwitcher.setFactory(function: () -> Unit) {
 
-}
 
 
