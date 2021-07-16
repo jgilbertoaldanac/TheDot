@@ -25,4 +25,9 @@
     <string name="misDias">Mis Días</string>
     <string name="agenda">Agenda</string>
     <string name="agendaCita">*** AgendaCita</string>
+    <string name="comoestashoy1">*¿Cómo</string>
+    <string name="comoestashoy2">estas hoy?</string>
+    <string name="intencionesdia">Intenciones del día</string>
+    <string name="intencionesdia1">*Intenciones</string>
+    <string name="intencionesdia2">del día</string>
 </resources>
