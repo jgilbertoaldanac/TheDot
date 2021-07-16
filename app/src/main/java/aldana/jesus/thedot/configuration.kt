@@ -3,9 +3,7 @@ package aldana.jesus.thedot
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
-import android.widget.ImageButton
+import android.widget.*
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.auth.ktx.userProfileChangeRequest
@@ -29,6 +27,8 @@ class configuration : AppCompatActivity() {
         var et_ocupacion: EditText = findViewById(R.id.et_ocupacion) as EditText
         var et_contrasenia: EditText = findViewById(R.id.et_contrasenia) as EditText
 
+        var tv_config : TextView = findViewById(R.id.tv_Configuracion) as TextView
+
         storage = FirebaseFirestore.getInstance()
         usuario = FirebaseAuth.getInstance()
 
@@ -38,47 +38,66 @@ class configuration : AppCompatActivity() {
         var ocupacion: String = ""
         var contrasenia: String = ""
 
+
+
         storage.collection("usuarios").whereEqualTo("correo",usuario.currentUser?.email).get().addOnSuccessListener {
             it.forEach {
-                nombre = it.getString("nombre").toString()
-                fechaNac = it.getString("fechaNac").toString()
-                ubicacion = it.getString("ubicacion").toString()
-                ocupacion = it.getString("ocupacion").toString()
-                contrasenia = it.getString("contrasenia").toString()
+
+                if(nombre.isNullOrBlank()){
+                    tv_config.setText(it.getString("nombre").toString())
+                     var nombrebueno = nombre
+                }else{
+                    nombre = "no entro al if"
+                }
+                if(fechaNac.isNullOrBlank()){
+                    et_fechaNac.setText(it.getString("fechaNac").toString())
+                }else{
+                    fechaNac ="no entro"
+                }
+                if(ubicacion.isNullOrBlank()){
+                    et_ubicacion.setText(it.getString("ubicacion").toString())
+                }
+                if(ocupacion.isNullOrBlank()){
+                    et_ocupacion.setText(it.getString("ocupacion").toString())
+                }
+                if(contrasenia.isNullOrBlank()){
+                    et_contrasenia.setText(it.getString("contrasenia").toString())
+                }
+
+
                 }
             }
 
-        if(!nombre.isNullOrBlank()){
-            et_nombre.setText(nombre)
-        }
-        if(!fechaNac.isNullOrBlank()){
-            et_fechaNac.setText(fechaNac)
-        }
-        if(!ubicacion.isNullOrBlank()){
-            et_ubicacion.setText(ubicacion)
-        }
-        if(!ocupacion.isNullOrBlank()){
-            et_ocupacion.setText(ocupacion)
-        }
-        if(!contrasenia.isNullOrBlank()){
-            et_contrasenia.setText(contrasenia)
-        }
+        nombre= et_nombre.text.toString()
+        contrasenia = et_contrasenia.text.toString()
+        fechaNac = et_fechaNac.text.toString()
+        ubicacion = et_ubicacion.text.toString()
+        ocupacion= et_ocupacion.text.toString()
+
+        println(nombre)
 
         val data = hashMapOf(
             "nombre" to nombre,
             "fechaNac" to fechaNac,
             "ubicacion" to ubicacion,
             "ocupacion" to ocupacion,
-            "contrasenia" to contrasenia
-        )
+            "contrasenia" to contrasenia)
 
         btn_close.setOnClickListener{
-            storage.collection("usuarios").document(usuario.currentUser?.email.toString()).set(data)
+
             var intent: Intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
 
         btn_back.setOnClickListener {
+            storage.collection("usuarios").document(usuario.currentUser?.email.toString()).set(data).addOnSuccessListener {
+                Toast.makeText(baseContext, "Afirmación guardada", Toast.LENGTH_SHORT).show()
+
+            }.addOnFailureListener { exception ->
+                Toast.makeText(baseContext, "valió pedo no jaló", Toast.LENGTH_SHORT).show()
+
+            }
+
             var intent: Intent = Intent(this, HomeActivity::class.java)
             startActivity(intent)
         }

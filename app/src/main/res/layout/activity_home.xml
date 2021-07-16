@@ -89,6 +89,7 @@
             android:layout_height="50dp"
             android:layout_marginTop="200dp"
             android:backgroundTint="@color/light_brown"
+            android:id="@+id/btn_atras"
             android:src="@drawable/regresar_mdpi_02" />
 
         <ImageView
@@ -98,25 +99,25 @@
             android:gravity="center"
             android:src="@drawable/frase" />
 
-
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-            <ViewFlipper
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/vf_imagenes">
-            </ViewFlipper>
-        </RelativeLayout>
-
-
         <ImageButton
+            android:id="@+id/btn_siguiente"
             android:layout_width="60dp"
             android:layout_height="50dp"
             android:layout_marginTop="200dp"
             android:layout_marginRight="60dp"
             android:backgroundTint="@color/light_brown"
             android:src="@drawable/avanzar_mdpi_02" />
+
+        <ImageSwitcher
+            android:layout_width="0dp"
+            android:id="@+id/imaSwitch"
+            android:layout_height="279dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="27dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"/>
+
     </LinearLayout>
 
     <LinearLayout

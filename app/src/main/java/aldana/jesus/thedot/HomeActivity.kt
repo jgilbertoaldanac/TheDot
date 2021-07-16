@@ -3,10 +3,8 @@ package aldana.jesus.thedot
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.ImageButton
-import android.widget.TextView
-import android.widget.ViewFlipper
+import android.view.animation.AnimationUtils
+import android.widget.*
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 
@@ -15,7 +13,7 @@ class HomeActivity : AppCompatActivity() {
     //variables donde se guardaran el acceso a la base de datos y el Authentication del user
     private lateinit var storage: FirebaseFirestore
     private lateinit var usuario: FirebaseAuth
-
+    private var index = 0
     //private val db= FirebaseFirestore.getInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,14 +27,23 @@ class HomeActivity : AppCompatActivity() {
         val btn_options: Button = findViewById(R.id.btn_ah_opciones) as Button
         val tv_bienvenida: TextView =findViewById(R.id.tv_ah_greeting) as TextView
 
+        var imageSwitcher: ImageSwitcher = findViewById(R.id.imaSwitch)
+
+        val btn_siguiente: ImageButton = findViewById(R.id.btn_siguiente)
+        val btn_atras: ImageButton = findViewById(R.id.btn_atras)
+
+
         //val value : Intent = intent
         //var nombre= value.getStringExtra("nombre")
-        //Val imagenes = arrayOf(R.drawable.sabias, R.drawable.ve_por_helado, R.drawable.playlist, R.drawable.foto_del_dia)
+     //   val imagenes = arrayOf(R.drawable.sabias, R.drawable.ve_por_helado, R.drawable.playlist, R.drawable.foto_del_dia)
+
 
         //Al usar lateinit en las variables anteriores, aqui los estamos instanciando
         //tanto la base de datos como el usuario
         storage = FirebaseFirestore.getInstance()
         usuario = FirebaseAuth.getInstance()
+
+
 
         var nombre: String = ""
 
@@ -89,5 +96,9 @@ class HomeActivity : AppCompatActivity() {
 
 
    }
+
+private fun ImageSwitcher.setFactory(function: () -> Unit) {
+
+}
 
 
